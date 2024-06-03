@@ -1,0 +1,287 @@
+@charset 'utf-8';
+
+/* z-index header 10 */
+
+.wrap {
+    position: relative;
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+
+    .contents {
+        position: relative;
+        width: 100%;
+        height: calc(100vh - rem(60));
+        margin-top: rem(60);
+        @include img_bg;
+
+        .top_notice {
+            @include centerX($top:rem(35));
+            @include flex(center, flex-start, rem(10));
+            width: calc(100% - rem(40));
+            max-width: 90%;
+            height: rem(30);
+            border-radius: rem(40);
+            background: $sky-blue;
+            padding: rem(8) rem(32) rem(8) rem(60);
+
+            p {
+                color: $black;
+                @include ftBold;
+                @include ftSize(lg);
+                white-space: nowrap;
+            }
+
+            span {
+                color: $black;
+                @include ftRegular;
+                @include ftSize(md);
+                @include ellipsis;
+            }
+
+            &::before {
+                @include content;
+                @include centerY($left: 0);
+                @include img_notice;
+                width: rem(52);
+                height: rem(52);
+            }
+        }
+
+        .bottom_mission {
+            @include centerX($bottom: rem(15));
+            @include flex(center, center, rem(10));
+            width: calc(100% - rem(40));
+            max-width: 90%;
+
+            .mission_box {
+                position: relative;
+                @include flex(center, center, rem(8), column);
+
+                .mission_btn {
+                    z-index: 10;
+                    @include flex(center, center, rem(8), column);
+                    background: $white;
+                    border-radius: rem(7);
+                    width: rem(100);
+                    height: rem(90);
+                    color: $black;
+                    @include ftMedium;
+                    @include ftSize(md);
+
+                    &::before {
+                        @include content(block);
+                        width: rem(50);
+                        height: rem(44);
+                    }
+
+                    &.pet {
+                        &::before {
+                            @include img_pet;
+                        }
+                    }
+
+                    &.feed {
+                        &::before {
+                            @include img_feed;
+                        }
+                    }
+
+                    &.play {
+                        &::before {
+                            @include img_play;
+                        }
+                    }
+                }
+
+                .count {
+                    width: rem(48);
+                    height: rem(20);
+                    color: $point-color;
+                    @include ftMedium;
+                    @include ftSize(md);
+                    text-align: center;
+                    line-height: rem(20);
+                    background: $sky-blue;
+                    border-radius: rem(10);
+                    border: 1px solid $point-color;
+                }
+            }
+
+            .mission_ani {
+                position: absolute;
+                z-index: 9;
+
+                div {
+                    @include centerX($top: -50px);
+                }
+
+                &.ani_play {
+
+                    div:nth-child(even) {
+                        animation: 2.8s missionAniEven linear;
+                    }
+    
+                    div:nth-child(odd) {
+                        animation: 2.8s missionAniOdd linear;
+                    }
+    
+                    div:nth-child(1) {
+                        animation-delay: 0.4s;
+                    }
+    
+                    div:nth-child(2) {
+                        animation-delay: 0.6s;
+                    }
+    
+                    div:nth-child(3) {
+                        animation-delay: 1.2s;
+                    }
+    
+                    div:nth-child(4) {
+                        animation-delay: 2.0s;
+                    }
+    
+                    div:nth-child(5) {
+                        animation-delay: 2.4s;
+                    }
+    
+                    div:nth-child(6) {
+                        animation-delay: 2.6s;
+                    }
+    
+                    div:nth-child(7) {
+                        animation-delay: 3.2s;
+                    }
+    
+                    @-moz-keyframes missionAniEven {
+                        0% {
+                            transform: translate(0, 0) scale(1);
+                            opacity: 1;
+                            filter: blur(0px);
+                        }
+    
+                        100% {
+                            transform: translate(35px, 0px) scale(1.5);
+                            opacity: 0;
+                            filter: blur(5px);
+                        }
+                    }
+    
+                    @-webkit-keyframes missionAniEven {
+                        0% {
+                            transform: translate(0px, 0px) scale(1);
+                            opacity: 1;
+                            filter: blur(0px);
+                        }
+    
+                        100% {
+                            transform: translate(0px, -500px) scale(1);
+                            opacity: 0;
+                            filter: blur(5px);
+                        }
+                    }
+    
+                    @keyframes missionAniEven {
+                        0% {
+                            transform: translate(5px, 10px) scale(1);
+                            opacity: 1;
+                            filter: blur(0px);
+                        }
+    
+                        100% {
+                            transform: translate(0px, -480px) scale(1.5);
+                            opacity: 0;
+                            filter: blur(5px);
+                        }
+                    }
+    
+                    @-moz-keyframes missionAniOdd {
+                        0% {
+                            transform: translate(5px, 15px) scale(1);
+                            opacity: 1;
+                            filter: blur(0px);
+                        }
+    
+                        100% {
+                            transform: translate(10px, -480px) scale(1.5);
+                            opacity: 0;
+                            filter: blur(5px);
+                        }
+                    }
+    
+                    @-webkit-keyframes missionAniOdd {
+                        0% {
+                            transform: translate(0, 0) scale(1);
+                            opacity: 1;
+                            filter: blur(0px);
+                        }
+    
+                        100% {
+                            transform: translate(-35px, -480px) scale(1.5);
+                            opacity: 0;
+                            filter: blur(5px);
+                        }
+                    }
+    
+                    @keyframes missionAniOdd {
+                        0% {
+                            transform: translate(0, 0) scale(1);
+                            opacity: 1;
+                            filter: blur(0px);
+                        }
+    
+                        100% {
+                            transform: translate(-35px, -480px) scale(1.5);
+                            opacity: 0;
+                            filter: blur(5px);
+                        }
+                    }
+                }
+
+                &.heart {
+                    div {
+                        @include ico_heart(34, 28);
+                    }
+                }
+
+                &.music {
+                    div {
+                        @include ico_music(34, 36);
+                    }
+                }
+
+                &.smile {
+                    div {
+                        @include ico_smile(34, 34);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header {
+    z-index: 10;
+    @include centerX(fixed);
+    top: 0;
+    width: 100%;
+    max-width: 768px;
+    height: rem(60);
+    background: $white;
+    border-bottom: 1px solid $border-color;
+
+    .prev_btn {
+        @include ico_prev(9, 17, $black);
+        @include centerY;
+        left: rem(30);
+    }
+
+    h1 {
+        color: $black;
+        @include ftSemiBold;
+        @include ftSize(xl);
+        line-height: rem(60);
+        text-align: center;
+    }
+}

@@ -1,0 +1,70 @@
+@charset 'utf-8';
+
+/* images */
+@mixin image($name, $path: "../images/", $format:"png", $bgXY:center) {
+    background: url("#{$path}#{$name}.#{$format}") no-repeat $bgXY;
+}
+
+/* icon */
+@mixin icon ($name, $path: "../images/icon/", $format:"png", $bgXY:center) {
+    background: url("#{$path}#{$name}.#{$format}") no-repeat $bgXY;
+    font-size: 0;
+}
+
+@mixin iconMask ($name, $color, $path: "../images/icon/", $format:"svg") {
+    background-color: $color;
+    mask-image : url("#{$path}#{$name}.#{$format}");
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    font-size: 0;
+}
+
+@mixin img_bg {
+    @include image($name:'img_bg',$bgXY:center top);
+    background-size: cover;
+}
+
+@mixin ico_prev($width, $height, $color: auto) {
+    @include iconMask($name:'ico_prev', $color : $color );
+    width: rem($width);
+    height: rem($height);
+}
+
+@mixin img_notice {
+    @include image($name:'img_notice');
+    background-size: 100%;
+}
+
+@mixin img_pet {
+    @include image($name:'img_pet');
+    background-size: 100%;
+}
+
+@mixin img_feed {
+    @include image($name:'img_feed');
+    background-size: 100%;
+}
+
+@mixin img_play {
+    @include image($name:'img_play');
+    background-size: 100%;
+}
+
+@mixin ico_heart($width, $height) {
+    @include icon($name:'ico_heart', $format:"svg" );
+    width: rem($width);
+    height: rem($height);
+}
+
+@mixin ico_smile($width, $height) {
+    @include icon($name:'ico_smile', $format:"svg" );
+    width: rem($width);
+    height: rem($height);
+}
+
+@mixin ico_music($width, $height) {
+    @include icon($name:'ico_music', $format:"svg" );
+    width: rem($width);
+    height: rem($height);
+}

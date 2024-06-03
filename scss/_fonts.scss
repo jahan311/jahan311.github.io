@@ -1,0 +1,26 @@
+$font-name: "Pretendard";
+$font-path : "../fonts/";
+
+@mixin font-face( $font-name,
+  $style,
+  $weight: normal,
+  $support-legacy: false
+) {
+  $file-name: $font-path + $font-name + "-" + $style;
+  
+  @font-face {
+    font-family: quote($font-name);
+
+    // local() 함수 + url() 함수 사용하는 폰트 소스 코드
+    $font-source: 'local("#{$font-name}-#{$style}"), url("#{$file-name}.woff2") format("woff2"), local("#{$font-name}-#{$style}"), url("#{$file-name}.woff") format("woff")';
+
+    src: unquote($font-source);
+    font-style: $style;
+    font-weight: $weight;
+  }
+}
+
+@include font-face($font-name, "Regular", 400);
+@include font-face($font-name, "Medium", 500);
+@include font-face($font-name, "SemiBold", 600);
+@include font-face($font-name, "Bold", 700);

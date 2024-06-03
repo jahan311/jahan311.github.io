@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+  <title>모비컴즈 GS리테일</title>
+  <link rel="stylesheet" href="/css/common.css">
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <button type="button" class="prev_btn">이전</button>
+            <h1>갓생 무무씨</h1>
+        </header>
+        <div class="contents">
+            <div class="top_notice">
+                <p>공지사항</p>
+                <span class="txt">공지사항내용 공지사항내용 공지사항내용 공지사항내용</span>
+            </div>
+            <div class="bottom_mission">
+                <div class="mission_box">
+                    <!-- class="missio_btn 유동클래스" -->
+                    <button type="button" class="mission_btn pet">
+                        <span>쓰다듬기</span>
+                    </button>
+                    <p class="count">1회</p>
+                    <!-- class="mission_ani 유동클래스" -->
+                    <div class="mission_ani heart">
+                    </div>
+                </div>
+                <div class="mission_box">
+                    <button type="button" class="mission_btn feed">
+                        <span>밥주기</span>
+                    </button>
+                    <p class="count">1회</p>
+                    <div class="mission_ani smile">=
+                    </div>
+                </div>
+                <div class="mission_box">
+                    <button type="button" class="mission_btn play">
+                        <span>놀아주기</span>
+                    </button>
+                    <p class="count">1회</p>
+                    <div class="mission_ani music">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.mission_btn').forEach(button => {
+          button.addEventListener('click', () => {
+            document.querySelectorAll('.mission_ani').forEach(missionAni => {
+                missionAni.classList.remove('ani_play');
+                missionAni.innerHTML = ''; // Clear previous divs if any
+            });
+
+            const missionAni = button.nextElementSibling.nextElementSibling;
+            missionAni.classList.add('ani_play');
+    
+            for (let i = 0; i < 7; i++) {
+              const div = document.createElement('div');
+              missionAni.appendChild(div);
+            }
+          });
+        });
+      </script>
+</body>
+</html>
