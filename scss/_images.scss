@@ -21,14 +21,18 @@
 }
 
 @mixin img_bg {
-    @include image($name:'img_bg',$bgXY:center top);
+    @include image($name:'img_bg');
     background-size: cover;
 }
 
-@mixin ico_prev($width, $height, $color: auto) {
-    @include iconMask($name:'ico_prev', $color : $color );
-    width: rem($width);
-    height: rem($height);
+@mixin img_character {
+    @include image($name:'img_character');
+    background-size: 100%;
+}
+
+@mixin img_character_deco {
+    @include image($name:'img_character_deco');
+    background-size: 100%;
 }
 
 @mixin img_notice {
@@ -36,6 +40,7 @@
     background-size: 100%;
 }
 
+/* bottom_mission */
 @mixin img_pet {
     @include image($name:'img_pet');
     background-size: 100%;
@@ -49,6 +54,38 @@
 @mixin img_play {
     @include image($name:'img_play');
     background-size: 100%;
+}
+
+/* right_menu */
+@mixin img_stamp {
+    @include image($name:'img_stamp');
+    background-size: 100%;
+}
+
+@mixin img_invite {
+    @include image($name:'img_invite');
+    background-size: 100%;
+}
+
+@mixin img_roulette {
+    @include image($name:'img_roulette');
+    background-size: 100%;
+}
+
+@mixin img_mission {
+    @include image($name:'img_mission');
+    background-size: 100%;
+}
+
+@mixin img_goods {
+    @include image($name:'img_goods');
+    background-size: rem(30);
+}
+
+@mixin ico_prev($width, $height, $color: auto) {
+    @include iconMask($name:'ico_prev', $color : $color );
+    width: rem($width);
+    height: rem($height);
 }
 
 @mixin ico_heart($width, $height) {
