@@ -37,7 +37,7 @@
                         <div class="level_img">
                             <img src="../images/img_level.png" alt="레벨 이미지">
                         </div>
-                        <div class="level_progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70">
+                        <div class="level_progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
                             <div class="level_bar"></div>
                             <span class="level_count"></span>
                         </div>
@@ -74,7 +74,8 @@
             <div class="bottom_mission">
                 <div class="mission_box">
                     <!-- class="missio_btn 유동클래스" -->
-                    <button type="button" class="mission_btn pet">
+                    <!-- class="missio_btn 유동클래스" disabled >> 비활성화 -->
+                    <button type="button" class="mission_btn pet" data-count="59:59:59">
                         <span>쓰다듬기</span>
                     </button>
                     <p class="count">1회</p>
@@ -83,15 +84,15 @@
                     </div>
                 </div>
                 <div class="mission_box">
-                    <button type="button" class="mission_btn feed">
+                    <button type="button" class="mission_btn feed" data-count="참여횟수 소진">
                         <span>밥주기</span>
                     </button>
                     <p class="count">1회</p>
-                    <div class="mission_ani smile">=
+                    <div class="mission_ani smile">
                     </div>
                 </div>
                 <div class="mission_box">
-                    <button type="button" class="mission_btn play">
+                    <button type="button" class="mission_btn play" data-count="59:59:59">
                         <span>놀아주기</span>
                     </button>
                     <p class="count">1회</p>
@@ -100,6 +101,11 @@
                 </div>
             </div>
         </div>
+        <!-- toast에 show 클래스 추가 -->
+        <div id="toast" class="show"><p>앱을 나가지 않으면<br>횟수가 추가돼요.</p></div>
+        <div id="toast"><p>미션A 모두 적립!</p></div>
+        <div id="toast" class="check show"><p>갤러리에 저장되었습니다.</p></div>
+        <div id="toast" class="check"><p>이미지 저장 후 상품을 선택해 주세요.</p></div>
     </div>
     <script src="/js/common.js"></script>
 </body>

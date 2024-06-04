@@ -180,6 +180,34 @@
                         height: rem(44);
                     }
 
+                    &:disabled {
+                        pointer-events: none;
+                        background: $dark-gray;
+
+                        span {
+                            filter: invert(0.6);
+                        }
+
+                        &::after {
+                            content: attr(data-count);
+                            @include centerX($top: 0);
+                            width: rem(100);
+                            height: rem(90);
+                            border-radius: rem(7);
+                            background: rgba($blue-gray, 0.6);
+                            mix-blend-mode: inherit;
+                            color: $white;
+                            @include ftBold;
+                            @include ftSize(lg);
+                            line-height: rem(90);
+                            text-align: center;
+                        }
+
+                        &::before {
+                            filter: grayscale(1) brightness(0.9);
+                        }
+                    }
+
                     &.pet {
                         &::before {
                             @include img_pet;
@@ -442,11 +470,11 @@
 
             .info_box {
                 @include centerX($bottom: rem(-100));
-                @include flex(center, center, 0, column);
+                @include flex(center, center, rem(30), column);
     
                 .nickname_box {
                     @include flex(center, center, rem(5));
-                    margin-bottom: rem(30);
+                    //margin-bottom: rem(30);
     
                     .level {
                         color: $white;
@@ -468,7 +496,7 @@
     
                 .level_box {
                     @include flex(center, center);
-                    margin-bottom: rem(40);
+                   //margin-bottom: rem(40);
     
                     .level_img {
                         position: absolute;
@@ -625,5 +653,61 @@
         @include ftSize(xl);
         line-height: rem(60);
         text-align: center;
+    }
+}
+
+#toast {
+    visibility: hidden;
+    @include centerX(fixed, $bottom: rem(175));
+    background: rgba($blue-gray, 0.9);
+    border-radius: rem(6);
+    padding: rem(14) rem(24);
+    color: $white;
+    text-align: center;
+
+    &.show {
+        visibility: visible;
+        animation: fade-in 0.7s, fade-out 0.7s 2s;
+    }
+
+    &.check {
+        @include centerX(fixed, $bottom: rem(25));
+        width: 90%;
+        max-width: rem(328);
+        padding: rem(12);
+        text-align: left;
+
+        p {
+            &::before {
+                @include content;
+                @include ico_check(20,20);
+                vertical-align: middle;
+                margin-right: rem(8);
+            }
+        }
+    }
+
+    p {
+        @include ftRegular;
+        @include ftSize(lg);
+        line-height: rem(16);
+    }
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fade-out {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
     }
 }

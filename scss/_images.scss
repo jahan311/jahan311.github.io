@@ -88,6 +88,12 @@
     height: rem($height);
 }
 
+@mixin ico_check($width, $height) {
+    @include icon($name:'ico_check', $format:"svg" );
+    width: rem($width);
+    height: rem($height);
+}
+
 @mixin ico_heart($width, $height) {
     @include icon($name:'ico_heart', $format:"svg" );
     width: rem($width);
