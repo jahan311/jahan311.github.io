@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
   <title>모비컴즈 GS리테일</title>
-  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/common.css?v240604">
   <script src="/js/jquery-3.5.1.min.js"></script>
 </head>
 <body>
@@ -19,10 +19,63 @@
                 <p>공지사항</p>
                 <span class="txt">공지사항내용 공지사항내용 공지사항내용 공지사항내용</span>
             </div>
+            <div class="character_box">
+                <div class="bubble">
+                    <p>공백포함 최대열글자</p>
+                </div>
+                <div class="character">
+                    <img src="../images/img_character.png" alt="무무씨">
+                </div>
+                <div class="shadow"></div>
+                <div class="info_box">
+                    <div class="nickname_box">
+                        <p class="level">Lv.1</p>
+                        <p class="nickname">닉네임 최대10글자</p>
+                    </div>
+                    <div class="level_box">
+                        <!-- progress 100되면 level_img에 scaleup 클래스 추가 스크립트 들어가있음 -->
+                        <div class="level_img">
+                            <img src="../images/img_level.png" alt="레벨 이미지">
+                        </div>
+                        <div class="level_progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+                            <div class="level_bar"></div>
+                            <span class="level_count"></span>
+                        </div>
+                    </div>
+                    <div class="goods_box">
+                        <div class="goods_img">
+                            <img src="../images/img_goods.png" alt="상품 이미지">
+                        </div>
+                        <div class="goods_progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+                            <div class="goods_bar"></div>
+                            <span class="goods_count"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right_menu">
+                <ul>
+                    <li class="menu_box">
+                        <button type="button" class="stamp">출근 도장</button>
+                    </li>
+                    <li class="menu_box">
+                        <button type="button" class="invite">친구 초대</button>
+                    </li>
+                    <li class="menu_box">
+                        <!-- <button type="button" class="roulette" data-countdown="24:00:00">행운 룰렛</button> -->
+                        <!-- 비활성화&카운트처리 된 버튼 -->
+                        <button type="button" class="roulette" data-countdown="24:00:00" disabled>내일 도전</button>                        
+                    </li>
+                    <li class="menu_box">
+                        <button type="button" class="mission">미션 받기</button>
+                    </li>
+                </ul>
+            </div>
             <div class="bottom_mission">
                 <div class="mission_box">
                     <!-- class="missio_btn 유동클래스" -->
-                    <button type="button" class="mission_btn pet">
+                    <!-- class="missio_btn 유동클래스" disabled >> 비활성화 -->
+                    <button type="button" class="mission_btn pet" data-count="59:59:59">
                         <span>쓰다듬기</span>
                     </button>
                     <p class="count">1회</p>
@@ -31,15 +84,15 @@
                     </div>
                 </div>
                 <div class="mission_box">
-                    <button type="button" class="mission_btn feed">
+                    <button type="button" class="mission_btn feed" data-count="참여횟수 소진">
                         <span>밥주기</span>
                     </button>
                     <p class="count">1회</p>
-                    <div class="mission_ani smile">=
+                    <div class="mission_ani smile">
                     </div>
                 </div>
                 <div class="mission_box">
-                    <button type="button" class="mission_btn play">
+                    <button type="button" class="mission_btn play" data-count="59:59:59">
                         <span>놀아주기</span>
                     </button>
                     <p class="count">1회</p>
@@ -48,7 +101,12 @@
                 </div>
             </div>
         </div>
+        <!-- toast에 show 클래스 추가 -->
+        <div id="toast" class="show"><p>앱을 나가지 않으면<br>횟수가 추가돼요.</p></div>
+        <div id="toast"><p>미션A 모두 적립!</p></div>
+        <div id="toast" class="check show"><p>갤러리에 저장되었습니다.</p></div>
+        <div id="toast" class="check"><p>이미지 저장 후 상품을 선택해 주세요.</p></div>
     </div>
-    <script src="/js/common.js"></script>
+    <script src="/js/common.js?v240604"></script>
 </body>
 </html>

@@ -35,13 +35,17 @@ body {
   width: 100%;
   height: 100vh;
   font-size: 1rem;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 html,
 body {
   -ms-overflow-style: none;
   scrollbar-width: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
@@ -390,6 +394,9 @@ em {
   background: url("../images/img_invite.png") no-repeat center;
   background-size: 100%;
 }
+.wrap .contents .right_menu ul .menu_box button.roulette {
+  position: relative;
+}
 .wrap .contents .right_menu ul .menu_box button.roulette::before {
   background: url("../images/img_roulette.png") no-repeat center;
   background-size: 100%;
@@ -398,6 +405,10 @@ em {
   -webkit-filter: grayscale(1) brightness(0.9);
           filter: grayscale(1) brightness(0.9);
   pointer-events: none;
+}
+.wrap .contents .right_menu ul .menu_box button.roulette:disabled::before {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .wrap .contents .right_menu ul .menu_box button.roulette:disabled::after {
   content: attr(data-countdown);

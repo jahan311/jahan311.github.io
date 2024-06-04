@@ -24,12 +24,13 @@ body {
 	width: 100%;
     height: 100vh;
 	font-size: 1.0rem;
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 html,
 body {
 	@include noscroll;
+	user-select:none;
 }
 
 html,
