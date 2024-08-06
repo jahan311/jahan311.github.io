@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도영 스트리밍</title>
+    <meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta property="og:url" content="https://dystrm.kr/">
+    <meta property="og:title" content="NCT도영 스트리밍">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://dystrm.github.io/images/meta.png">
+    <meta property="og:description" content="NCT도영 스트리밍 website">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link type="text/css" href="/css/common.css?240422v2" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/js/common.js?240422v2"></script>
+    <link type="text/css" href="/material-design-iconic-font/css/material-design-iconic-font.min.css"
+        rel="stylesheet" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6H3X63YWSE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-6H3X63YWSE');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NNBB6GTQ');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NNBB6GTQ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="wrap" class="">
+        <header data-include-path="/header"></header>
+        <section class="main">
+            <div class="section-inner flex">
+                <section class="flex-column">
+                    <div class="oneclick-wrap">
+                        <h3>원클릭 서비스</h3>
+                        <div class="btn-wrap">
+                            <div class="ios-wrap">
+                                <h4>맬론 iOS 전용 서비스</h4>
+                                <div class="container">
+                                    <div onclick="openBuySong()" class="btn">
+                                        <i class="mp3">MP3</i>
+                                        <div class="txt">
+                                            <p>개별곡 다운</p>
+                                            <p>700원</p>
+                                        </div>
+                                    </div>
+                                    <div onclick="openBuyFlac()" class="btn">
+                                        <i class="flac">FLAC</i>
+                                        <div class="txt">
+                                            <p>FLAC 다운</p>
+                                            <p>1,000원</p>
+                                        </div>
+                                    </div>
+                                    <div class="btn disabled">
+                                        <i class="mv">MV</i>
+                                        <div class="txt">
+                                            <p>뮤직비디오 다운</p>
+                                            <p>준비중</p>
+                                        </div>
+                                    </div>
+                                    <!-- <div onclick="openCash()" class="btn cash">
+                                        <i class="cash zmdi zmdi-money"></i>
+                                        <div class="txt">
+                                            <p>캐시충전</p>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="other-wrap">
+                                <h4>전체 서비스</h4>
+                                <div class="container">
+                                    <div onclick="openOneClick()" class="btn-type02">
+                                        <i class="zmdi zmdi-collection-music"></i>
+                                        <p>스트리밍 원클릭</p>
+                                    </div>
+                                    <div onclick="openCash()" class="btn-type02">
+                                        <i class="cash zmdi zmdi-money"></i>
+                                        <p>멜론 캐시충전</p>
+                                    </div>
+                                    <div onclick="openRadioOneclick()" class="btn-type02">
+                                        <i class="zmdi zmdi-radio"></i>
+                                        <p>라디오 신청</p>
+                                    </div>
+                                    <div onclick="openMelonAwards()" class="btn-type02">
+                                        <i class="zmdi zmdi-favorite"></i>
+                                        <p>주간인기상 투표</p>
+                                    </div>
+                                    <!-- <div onclick="openCircleChart()" class="btn-type02">
+                                        <i class="zmdi zmdi-link"></i>
+                                        <p>써클차트 바로가기</p>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="youtube-wrap">
+                        <div class="youtube-box">
+                            <a href="" target="_blank">
+                                <div class="thumbnail"></div>
+                            </a>
+                        </div>
+                        <div class="youtube-info-box">
+                            <div class="flex-wrap">
+                                <div>
+                                    <p class="youtube-info-text">YYYY-MM-DD hh:mm 기준 조회수</p>
+                                    <p class="youtube-count"><span id="viewCount">Loading...</span></p>
+                                </div>
+                                <p class="target">목표 : </p>
+                            </div>
+                            <div class="youtube-progress">
+                                <div class="progress-bar">
+                                    <div class="percent"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="flex-column">
+                    <div class="twitter-wrap">
+                        <div class="timeline-box">
+                            <a class="twitter-timeline" href="https://twitter.com/DOYOUNG_STREAM">Tweets by
+                                DOYOUNG_STREAM</a>
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </div>
+                        <div class="hashtag-box">
+                            <button type="button" onclick="twitterhash1()">
+                                <i>#</i>스트리밍 인증 해시태그</button>
+                            <button type="button" onclick="twitterhash2()">
+                                <i>#</i>
+                                <청춘의 포말 - 반딧불> 도장깨기 이벤트
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <footer data-include-path="/footer"></footer>
+    </div>
+    <div data-include-path="/popup"></div>
+</body>
+
+</html>

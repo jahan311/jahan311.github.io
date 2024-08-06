@@ -1,0 +1,17 @@
+$font-name: "Pretendard Variable";
+
+@font-face {
+	font-family: $font-name;
+	font-weight: 300 400 500 700;
+	font-style: normal;
+	font-display: swap;
+	src: url('../fonts/PretendardVariable.woff2') format('woff2-variations');
+}
+
+@font-face {
+	font-family: 'Material-Design-Iconic-Font';
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+	src: url('../material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff2') format('woff2-variations');
+}
