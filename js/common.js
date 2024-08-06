@@ -78,8 +78,8 @@ $(document).ready(function () {
 $(document).ready(function () {
     var apiKey = 'AIzaSyBlutTPaSd_dQRXEHXfyKs-SkbGjYfaf-c';
     /* youtube video id */
-    /* https://www.youtube.com/watch?v=UZjGcAjd8Ok */
-    var videoId = 'UZjGcAjd8Ok';
+    /* https://www.youtube.com/watch?v=cfd6FnYcNyo */
+    var videoId = 'cfd6FnYcNyo';
     var apiUrl = 'https://www.googleapis.com/youtube/v3/videos';
 
     function formatNumberWithUnit(number) {
