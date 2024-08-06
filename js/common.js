@@ -230,7 +230,7 @@ function openOneClick() {
 function openBuySong() {
     var isIOS = /iPhone|iPad/i.test(navigator.userAgent);
     if (isIOS) {
-        location.href = "melonapp://webview?url=https://m2.melon.com/buy/contents/purchase.htm?paramsName=contsId&contsId=37436295&byContsId=37436295&bySclasCode=FG1102&prodSclasCode=FG1102&byCodecTypeCode=AG0113&price=700&contsType=3C0001&tab=BUYSONG&menuId=1000000386&paymtAmt=700&prodId=&retUrl=&buyActUrl=%2Fcommerce%2Fm%2Fchannel%2Fcontents%2Fmobileapp%2Fandroidchannel_downloadProc.htm&viewType=&isNineteenContentExcept=N&pocId=AS20&memberKey=1";
+        location.href = "melonapp://webview?url=https://m2.melon.com/buy/contents/purchase.htm?paramsName=contsId&contsId=37860725&byContsId=37860725&bySclasCode=FG1102&prodSclasCode=FG1102&byCodecTypeCode=AG0113&price=700&contsType=3C0001&tab=BUYSONG&menuId=1000000386&paymtAmt=700&prodId=&retUrl=&buyActUrl=%2Fcommerce%2Fm%2Fchannel%2Fcontents%2Fmobileapp%2Fandroidchannel_downloadProc.htm&viewType=&isNineteenContentExcept=N&pocId=AS20&memberKey=1";
         
     } else {
         $('#mobilePop .popup-box .text').text('아이폰 전용 기능입니다.');
@@ -242,7 +242,7 @@ function openBuySong() {
 function openBuyFlac() {
     var isIOS = /iPhone|iPad/i.test(navigator.userAgent);
     if (isIOS) {
-        location.href = "melonapp://webview?url=https://m2.melon.com/buy/contents/purchase.htm?paramsName=contsId&contsId=37436295&byContsId=37436295&bySclasCode=FG1106&prodSclasCode=FG1106&byCodecTypeCode=AG0113&price=1000&contsType=3C0001&tab=BUYFLACSONG&menuId=1000002721&paymtAmt=1000&downType=&prodId=&retUrl=&buyActUrl=%2Fcommerce%2Fm%2Fchannel%2Fcontents%2Fmobileapp%2Fandroidchannel_downloadProc.htm&viewType=&isNineteenContentExcept=N&pocId=AS20&memberKey=1";
+        location.href = "melonapp://webview?url=https://m2.melon.com/buy/contents/purchase.htm?paramsName=contsId&contsId=37860725&byContsId=37860725&bySclasCode=FG1106&prodSclasCode=FG1106&byCodecTypeCode=AG0113&price=1000&contsType=3C0001&tab=BUYFLACSONG&menuId=1000002721&paymtAmt=1000&downType=&prodId=&retUrl=&buyActUrl=%2Fcommerce%2Fm%2Fchannel%2Fcontents%2Fmobileapp%2Fandroidchannel_downloadProc.htm&viewType=&isNineteenContentExcept=N&pocId=AS20&memberKey=1";
 
     } else {
         $('#mobilePop .popup-box .text').text('아이폰 전용 기능입니다.');
@@ -310,9 +310,9 @@ function twitterhash1() {
     window.open('https://twitter.com/intent/post?text=%23밝게_빛나던_도영이의_17 %23DOYOUNG_17_OutNow')
 }
 
-function twitterhash2() {
-    window.open('https://twitter.com/intent/post?text=%23행운토끼야_7개의_네잎클로버_부탁해')
-}
+// function twitterhash2() {
+//     window.open('https://twitter.com/intent/post?text=%23행운토끼야_7개의_네잎클로버_부탁해')
+// }
 
 // 스밍 원클릭
 
