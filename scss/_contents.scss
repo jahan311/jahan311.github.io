@@ -1,0 +1,66 @@
+@charset 'utf-8';
+
+/* z-index popup 100 */
+
+body {
+    background: #191919;
+}
+
+.wrap {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+
+    .img_wrap {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .pop_wrap {
+        display: none;
+        opacity: 0;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.6);
+        transition: opacity 1s ease;
+
+        &.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+        }
+
+        .pop_contents {
+            position: relative;
+            max-width: 500px;
+            .close_btn {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: 0;
+                background: url(../images/ico_pop_close.svg);
+                background-size: 100%;
+                width: 16px;
+                height: 16px;
+            }
+
+            img {
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
