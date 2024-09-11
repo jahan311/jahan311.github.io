@@ -8,4 +8,11 @@ $(document).ready(function(){
         $('.pop_wrap').removeClass('show');
         $('body').css('overflow', '');
     });
+
+    $('.pop_wrap').click(function(event) {
+        if (!$(event.target).closest('.pop_contents').length) {
+            $('.pop_wrap').removeClass('show');
+            $('body').css('overflow', '');
+        }
+    });
 });
